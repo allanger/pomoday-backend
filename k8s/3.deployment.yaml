@@ -1,0 +1,51 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pomoday-backend
+  namespace: pomoday
+  annotations:
+    keel.sh/policy: force
+    keel.sh/trigger: poll
+spec:
+  selector:
+    matchLabels:
+      run: pomoday
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: pomoday
+    spec:
+      volumes:
+        - name: pomoday-config
+          configMap:
+            name: pomoday-config
+            items:
+              - key: config.yaml
+                path: config.yaml
+
+      containers:
+        - name: pomoday-backend
+          image: ghcr.io/allanger/pomoday-backend:latest
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "10m"
+            limits:
+              memory: "128Mi"
+              cpu: "20m"
+          env:
+            - name: DATABASE_USERNAME
+              value: postgres
+            - name: DATABASE_PASSWORD
+              value: password
+            - name: DATABASE_NAME
+              value: postgres
+            - name: DATABASE_HOST
+              value: postgres
+            - name: DATABASE_PORT
+              value: "5432"
+          command:
+            - "./main"
+            - "serve"

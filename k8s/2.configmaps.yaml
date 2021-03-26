@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: pomoday-config
+  labels:
+    app: pomoday
+  namespace: pomoday
+data:
+  config.yaml: |-
+    database:
+      username: pomoday-user
+      password: password
+      name: pomoday
+      host: postgres
+      port: 5432
