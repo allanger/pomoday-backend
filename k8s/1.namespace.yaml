@@ -1,0 +1,10 @@
+# --------------------------------------
+# -- Namespace for grpcox
+# --------------------------------------
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: pomoday
+  labels:
+    owner: allanger

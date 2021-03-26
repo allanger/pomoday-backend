@@ -1,0 +1,33 @@
+---
+version: "3.8"
+
+services:
+  pomoday:
+    image: misterwil/pomoday-v2-docker
+    restart: unless-stopped
+    ports:
+      - "80:80"
+
+  postgres:
+    ports:
+      - "5432:5432"
+    env_file:
+      - configs/docker-compose.env
+    image: postgres:12
+
+  pomoday-backend:
+    build:
+      context: "."
+      dockerfile: "Dockerfile"
+    ports:
+      - "8080:8080"
+    command: sh -c "./main serve"
+    environment:
+      - DATABASE_HOST=postgres
+    image: pomoday-backend
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 8s
+        max_attempts: 5
+        window: 120s
