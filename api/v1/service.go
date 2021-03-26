@@ -24,7 +24,7 @@ func List(w http.ResponseWriter, r *http.Request) {
 	tasks, err := list(ctx)
 	if err != nil {
 		log.Error(err)
-		render.Render(w, r, errors.ErrServer(err))
+		// render.Render(w, r, errors.ErrServer(err))
 		return
 	}
 	render.Respond(w, r, newTasksListResponse(tasks))
@@ -54,7 +54,7 @@ func Update(w http.ResponseWriter, r *http.Request) {
 		log.Info("Validating tasks")
 		if err := t.Validate(); err != nil {
 			log.Error(err)
-			render.Render(w, r, errors.ErrValidation(errTaskValidation, err.(validation.Errors)))
+			// render.Render(w, r, errors.ErrValidation(errTaskValidation, err.(validation.Errors)))
 			return
 		}
 

@@ -4,6 +4,9 @@ kind: Deployment
 metadata:
   name: pomoday-backend
   namespace: pomoday
+  annotations:
+    keel.sh/policy: force
+    keel.sh/trigger: poll
 spec:
   selector:
     matchLabels:
@@ -32,16 +35,16 @@ spec:
             limits:
               memory: "128Mi"
               cpu: "20m"
-          env: 
-            - name: DATABASE_USERNAME 
+          env:
+            - name: DATABASE_USERNAME
               value: postgres
-            - name: DATABASE_PASSWORD 
+            - name: DATABASE_PASSWORD
               value: password
-            - name: DATABASE_NAME 
+            - name: DATABASE_NAME
               value: postgres
-            - name: DATABASE_HOST 
+            - name: DATABASE_HOST
               value: postgres
-            - name: DATABASE_PORT 
+            - name: DATABASE_PORT
               value: "5432"
           command:
             - "./main"

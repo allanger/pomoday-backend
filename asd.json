@@ -1,0 +1,133 @@
+{
+  "tasks": [
+    {
+      "userid": "c2891552-bb72-427b-8893-bc11aa9523a8",
+      "uuid": "c856ed1d-a02c-4999-b21c-7ca87f6d74a4",
+      "id": 11,
+      "tag": "@demo",
+      "title": "To see how your day's going, type `today`. Try it!",
+      "status": 1,
+      "logs": [],
+      "archived": false,
+      "lastaction": 1616705222114
+    },
+    {
+      "userid": "c2891552-bb72-427b-8893-bc11aa9523a8",
+      "uuid": "e37fa3ea-8e3b-4fca-b3f2-447e85e1c785",
+      "id": 12,
+      "tag": "@demo",
+      "title": "That's all! Now, type `delete @demo` to remove all of this tutorial content and start using Pomoday!",
+      "status": 1,
+      "logs": [],
+      "archived": false,
+      "lastaction": 1616705222114
+    },
+    {
+      "userid": "c2891552-bb72-427b-8893-bc11aa9523a8",
+      "uuid": "5380aca7-6cc4-47f0-b770-3f40f2fa53ef",
+      "id": 13,
+      "tag": "@dresup",
+      "title": "dresup-admin-users-service: proto refactor",
+      "status": 1,
+      "logs": [],
+      "archived": false,
+      "lastaction": 1616705366582
+    },
+    {
+      "userid": "c2891552-bb72-427b-8893-bc11aa9523a8",
+      "uuid": "cb41ec8a-265a-4740-aec6-636b2b700796",
+      "id": 1,
+      "tag": "@dresup",
+      "title": "[dresup-admin-users-service](https://github.com/badhouseplants/dresup-admin-users-service): proto refactor",
+      "status": 1,
+      "logs": [
+        {
+          "start": 1616705672979,
+          "end": 1616708243121
+        }
+      ],
+      "archived": false,
+      "lastaction": 1616705408124
+    },
+    {
+      "userid": "c2891552-bb72-427b-8893-bc11aa9523a8",
+      "uuid": "2f23f8fd-6715-4da8-9709-e61346d33a7e",
+      "id": 2,
+      "tag": "@dresup",
+      "title": "dresup-proto-docs: generate docs on pushes to dresup-proto dev and main",
+      "status": 3,
+      "logs": [],
+      "archived": false,
+      "lastaction": 1616706686482
+    },
+    {
+      "userid": "c2891552-bb72-427b-8893-bc11aa9523a8",
+      "uuid": "d726c0e5-24f5-4436-99d1-778b73dbc3a5",
+      "id": 3,
+      "tag": "@personal",
+      "title": "MacBook cleanup",
+      "status": 3,
+      "logs": [],
+      "archived": false,
+      "lastaction": 1616706748441
+    },
+    {
+      "userid": "c2891552-bb72-427b-8893-bc11aa9523a8",
+      "uuid": "f8024f63-3dc2-4577-844c-cfa7566d60ab",
+      "id": 4,
+      "tag": "@dresup",
+      "title": "dresup-admin-backend: create external logger lib",
+      "status": 3,
+      "logs": [],
+      "archived": false,
+      "lastaction": 1616707054316
+    },
+    {
+      "userid": "c2891552-bb72-427b-8893-bc11aa9523a8",
+      "uuid": "7271cf10-6ae2-4bdc-8389-978a99c500ee",
+      "id": 5,
+      "tag": "@dresup",
+      "title": "[dresup-admin-users-service](https://github.com/badhouseplants/dresup-admin-users-service): auth service with rights checks",
+      "status": 3,
+      "logs": [
+        {
+          "start": 1616708678173,
+          "end": 1616709625533
+        }
+      ],
+      "archived": false,
+      "lastaction": 1616708211221
+    },
+    {
+      "userid": "c2891552-bb72-427b-8893-bc11aa9523a8",
+      "uuid": "f1e4850b-4899-4166-9ff0-4ea157c2cc32",
+      "id": 6,
+      "tag": "@personal",
+      "title": "Pomoday backend implementation",
+      "status": 2,
+      "logs": [
+        {
+          "start": 1616739063415,
+          "end": 1616745350244
+        },
+        {
+          "start": 1616747514956,
+          "end": 0
+        }
+      ],
+      "archived": false,
+      "lastaction": 1616709654537
+    },
+    {
+      "userid": "c2891552-bb72-427b-8893-bc11aa9523a8",
+      "uuid": "e36805c9-9321-4561-aa12-ba9d56e8fb3c",
+      "id": 7,
+      "tag": "@home",
+      "title": "Clean the bathroom mirror",
+      "status": 3,
+      "logs": [],
+      "archived": false,
+      "lastaction": 1616710917159
+    }
+  ]
+}
