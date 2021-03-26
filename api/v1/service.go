@@ -8,7 +8,6 @@ import (
 	"github.com/allanger/pomoday-backend/tools/hasher"
 	"github.com/allanger/pomoday-backend/tools/logger"
 	"github.com/go-chi/render"
-	validation "github.com/go-ozzo/ozzo-validation"
 	"github.com/google/uuid"
 )
 
