@@ -13,7 +13,7 @@ import (
 const (
 	createTaskRequest  = "INSERT INTO tasks (userid, id, uuid, archived, tag, title, status, lastaction, logs) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)"
 	createUserRequest  = "INSERT INTO users (id, username, password) VALUES ($1, $2, $3)"
-	getTasksRequest    = "SELECT * FROM tasks WHERE userid=$1"
+	getTasksRequest    = "SELECT id, uuid, archived, tag, title, status, lastaction, logs FROM tasks WHERE userid=$1"
 	getTaskByIDRequest = "SELECT title FROM tasks WHERE uuid = $1"
 	updateTaskRequest  = "UPDATE tasks SET archived=$1, tag=$2, title=$3, status=$4, lastaction=$5, logs=$6 WHERE uuid = $1;"
 )

@@ -15,7 +15,6 @@ type Logs struct {
 
 // Task is a data struct for chain json
 type Task struct {
-	UserID     string `json:"userid" db:"userid"`
 	ID         int    `json:"id"`
 	UUID       string `json:"uuid"`
 	Archived   bool   `json:"archived"`

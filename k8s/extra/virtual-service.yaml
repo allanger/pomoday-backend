@@ -1,0 +1,24 @@
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: pomoday-backend
+  namespace: pomoday
+spec:
+  hosts:
+    - "example.com"
+  gateways:
+    - pomoday-gateway
+  http:
+    - match:
+        - uri:
+            prefix: /user
+        - uri:
+            prefix: /list
+      rewrite:
+        uri: /api
+      route:
+        - destination:
+            host: pomoday
+            port:
+              number: 8080

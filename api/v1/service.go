@@ -66,9 +66,16 @@ func Update(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 	}
-
-	render.Respond(w, r, newOkResponse())
+	log.Info("Fetching tasks")
+	tasks, err := list(ctx)
+	if err != nil {
+		log.Error(err)
+		render.Render(w, r, errors.ErrServer(err))
+		return
+	}
+	render.Respond(w, r, newTasksListResponse(tasks))
 	return
+
 }
 
 func CreateUser(w http.ResponseWriter, r *http.Request) {
